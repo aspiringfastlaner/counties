@@ -23,17 +23,11 @@ shinyUI(fluidPage(
                   label = "Choose a Variable",
                   choices = list("Percent White", "Percent Black",
                                  "Percent Hispanic", "Percent Asian"),
-                  selected = "Percent White"),
-      sliderInput("bins",
-                  "Number of bins:",
-                  min = 1,
-                  max = 50,
-                  value = 30)
-    ),
+                  selected = "Percent White")),
 
     # Show a plot of the generated distribution
     mainPanel(
-      plotOutput("distPlot")
+      plotOutput(outputId = "map")
     )
   )
 ))
